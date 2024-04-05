@@ -10,6 +10,7 @@ class FormLogin(FlaskForm):
     botao_confirmacao = SubmitField("Fazer Login")
 
     def validate_email(self, email):
+        usuario = Usuario.query.filter_by(email=email.data).first()
         if not usuario:
             raise ValidationError("Usuario inexistente, crie uma conta")
 
