@@ -71,7 +71,7 @@
             {% if form.email.errors %}
                 {% for erro in form.email.errors %}
                     <p style="color:red"> {{ erro }}</p>
-                {% enfor %}
+                {% endfor %}
               {% endif %}
                 {{ form.email( class="input") }}
           </div>
@@ -82,7 +82,7 @@
             {% if form.senha.errors %}
                 {% for erro in form.senha.errors %}
                     <p style="color:red"> {{ erro }}</p>
-                {% enfor %}
+                {% endfor %}
               {% endif %}
                 {{ form.senha(class="input" ) }}
           </div>
